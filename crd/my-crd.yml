@@ -1,0 +1,35 @@
+kind: CustomResourceDefinition
+apiVersion: apiextensions.k8s.io/v1
+metadata:
+  name: mybatches.mygroup.com
+spec:
+  group: mygroup.com
+  names:
+    plural: mybatches
+    singular: mybatch
+    kind: MyBatch
+    shortNames:
+     - merabatch
+     - mb
+  scope: Namespaced
+  versions:
+  - name: v1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              name: 
+                type: string
+                description: "Name of my group"
+              duration:
+                type: string
+                description: "Duration of my class"
+              mode:
+                type: string
+                description: "Mode of class Physical/Online"
+

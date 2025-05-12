@@ -1,0 +1,9 @@
+kind: MyBatch
+apiVersion: mygroup.com/v1
+metadata:
+  name: thebeast-group
+spec:
+  name: thebeast
+  duration: 1 hour
+  mode: Online
+  
